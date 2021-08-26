@@ -10,15 +10,15 @@ import cronapi.rest.security.CronappSecurity;
 
 
 /**
-* Classe que representa a tabela APPLICATION_USER
+* Classe que representa a tabela PILOTO
 * @generated
 */
 @Entity
-@Table(name = "\"APPLICATION_USER\"")
+@Table(name = "\"PILOTO\"")
 @XmlRootElement
 @CronappSecurity
-@JsonFilter("app.entity.ApplicationUser")
-public class ApplicationUser implements Serializable {
+@JsonFilter("app.entity.Piloto")
+public class Piloto implements Serializable {
 
     /**
     * UID da classe, necessário na serialização
@@ -36,24 +36,29 @@ public class ApplicationUser implements Serializable {
     /**
     * @generated
     */
-    @ManyToOne
-    @JoinColumn(name="application_id", nullable = true, referencedColumnName = "id", insertable=true, updatable=true, foreignKey = @ForeignKey(name = ""))
+    @Column(name = "nome", nullable = true, unique = false, insertable=true, updatable=true)
         
-        private Application application;
+        private java.lang.String nome;
 
     /**
     * @generated
     */
-    @ManyToOne
-    @JoinColumn(name="user_id", nullable = true, referencedColumnName = "id", insertable=true, updatable=true, foreignKey = @ForeignKey(name = ""))
+    @Column(name = "nacionalidade", nullable = true, unique = false, insertable=true, updatable=true)
         
-        private User user;
+        private java.lang.String nacionalidade;
+
+    /**
+    * @generated
+    */
+    @Column(name = "equipe", nullable = true, unique = false, insertable=true, updatable=true)
+        
+        private java.lang.String equipe;
 
     /**
     * Construtor
     * @generated
     */
-    public ApplicationUser(){
+    public Piloto(){
     }
 
     /**
@@ -71,46 +76,65 @@ public class ApplicationUser implements Serializable {
     * @param id id
     * @generated
     */
-    public ApplicationUser setId(java.lang.String id){
+    public Piloto setId(java.lang.String id){
         this.id = id;
         return this;
     }
     /**
-    * Obtém application
-    * return application
+    * Obtém nome
+    * return nome
     * @generated
     */
     
-    public Application getApplication(){
-        return this.application;
+    public java.lang.String getNome(){
+        return this.nome;
     }
 
     /**
-    * Define application
-    * @param application application
+    * Define nome
+    * @param nome nome
     * @generated
     */
-    public ApplicationUser setApplication(Application application){
-        this.application = application;
+    public Piloto setNome(java.lang.String nome){
+        this.nome = nome;
         return this;
     }
     /**
-    * Obtém user
-    * return user
+    * Obtém nacionalidade
+    * return nacionalidade
     * @generated
     */
     
-    public User getUser(){
-        return this.user;
+    public java.lang.String getNacionalidade(){
+        return this.nacionalidade;
     }
 
     /**
-    * Define user
-    * @param user user
+    * Define nacionalidade
+    * @param nacionalidade nacionalidade
     * @generated
     */
-    public ApplicationUser setUser(User user){
-        this.user = user;
+    public Piloto setNacionalidade(java.lang.String nacionalidade){
+        this.nacionalidade = nacionalidade;
+        return this;
+    }
+    /**
+    * Obtém equipe
+    * return equipe
+    * @generated
+    */
+    
+    public java.lang.String getEquipe(){
+        return this.equipe;
+    }
+
+    /**
+    * Define equipe
+    * @param equipe equipe
+    * @generated
+    */
+    public Piloto setEquipe(java.lang.String equipe){
+        this.equipe = equipe;
         return this;
     }
 
@@ -121,7 +145,7 @@ public class ApplicationUser implements Serializable {
     public boolean equals(Object obj) {
         if (this == obj) return true;
         if (obj == null || getClass() != obj.getClass()) return false;
-ApplicationUser object = (ApplicationUser)obj;
+Piloto object = (Piloto)obj;
         if (id != null ? !id.equals(object.id) : object.id != null) return false;
         return true;
     }

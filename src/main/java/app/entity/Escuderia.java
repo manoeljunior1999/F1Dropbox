@@ -7,18 +7,19 @@ import javax.xml.bind.annotation.*;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonFilter;
 import cronapi.rest.security.CronappSecurity;
+    import cronapi.CronapiCloud;
 
 
 /**
-* Classe que representa a tabela APPLICATION_USER
+* Classe que representa a tabela ESCUDERIA
 * @generated
 */
 @Entity
-@Table(name = "\"APPLICATION_USER\"")
+@Table(name = "\"ESCUDERIA\"")
 @XmlRootElement
 @CronappSecurity
-@JsonFilter("app.entity.ApplicationUser")
-public class ApplicationUser implements Serializable {
+@JsonFilter("app.entity.Escuderia")
+public class Escuderia implements Serializable {
 
     /**
     * UID da classe, necessário na serialização
@@ -36,24 +37,23 @@ public class ApplicationUser implements Serializable {
     /**
     * @generated
     */
-    @ManyToOne
-    @JoinColumn(name="application_id", nullable = true, referencedColumnName = "id", insertable=true, updatable=true, foreignKey = @ForeignKey(name = ""))
+    @Column(name = "nome", nullable = true, unique = false, insertable=true, updatable=true)
         
-        private Application application;
+        private java.lang.String nome;
 
     /**
     * @generated
     */
-    @ManyToOne
-    @JoinColumn(name="user_id", nullable = true, referencedColumnName = "id", insertable=true, updatable=true, foreignKey = @ForeignKey(name = ""))
+    @Column(name = "carro", nullable = true, unique = false, insertable=true, updatable=true)
+    @CronapiCloud(type = "cloudservices", value="5iwesvkV_s8AAAAAAAAAAazWKeKGrAQ_13_t2fPhb6tHXAYmk1vk7gsop2laD49U", id="", secret="")
         
-        private User user;
+        private java.lang.String carro;
 
     /**
     * Construtor
     * @generated
     */
-    public ApplicationUser(){
+    public Escuderia(){
     }
 
     /**
@@ -71,46 +71,46 @@ public class ApplicationUser implements Serializable {
     * @param id id
     * @generated
     */
-    public ApplicationUser setId(java.lang.String id){
+    public Escuderia setId(java.lang.String id){
         this.id = id;
         return this;
     }
     /**
-    * Obtém application
-    * return application
+    * Obtém nome
+    * return nome
     * @generated
     */
     
-    public Application getApplication(){
-        return this.application;
+    public java.lang.String getNome(){
+        return this.nome;
     }
 
     /**
-    * Define application
-    * @param application application
+    * Define nome
+    * @param nome nome
     * @generated
     */
-    public ApplicationUser setApplication(Application application){
-        this.application = application;
+    public Escuderia setNome(java.lang.String nome){
+        this.nome = nome;
         return this;
     }
     /**
-    * Obtém user
-    * return user
+    * Obtém carro
+    * return carro
     * @generated
     */
     
-    public User getUser(){
-        return this.user;
+    public java.lang.String getCarro(){
+        return this.carro;
     }
 
     /**
-    * Define user
-    * @param user user
+    * Define carro
+    * @param carro carro
     * @generated
     */
-    public ApplicationUser setUser(User user){
-        this.user = user;
+    public Escuderia setCarro(java.lang.String carro){
+        this.carro = carro;
         return this;
     }
 
@@ -121,7 +121,7 @@ public class ApplicationUser implements Serializable {
     public boolean equals(Object obj) {
         if (this == obj) return true;
         if (obj == null || getClass() != obj.getClass()) return false;
-ApplicationUser object = (ApplicationUser)obj;
+Escuderia object = (Escuderia)obj;
         if (id != null ? !id.equals(object.id) : object.id != null) return false;
         return true;
     }
