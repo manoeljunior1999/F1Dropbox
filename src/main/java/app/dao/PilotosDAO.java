@@ -17,8 +17,8 @@ import org.springframework.transaction.annotation.*;
  * 
  * @generated
  */
-@Repository("SecurableDAO")
+@Repository("PilotosDAO")
 @Transactional(transactionManager="app-TransactionManager")
-public interface SecurableDAO extends JpaRepository<Securable, java.lang.String> {
+public interface PilotosDAO extends JpaRepository<Pilotos, java.lang.String> {
 
 }

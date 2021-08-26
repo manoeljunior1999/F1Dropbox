@@ -10,15 +10,15 @@ import cronapi.rest.security.CronappSecurity;
 
 
 /**
-* Classe que representa a tabela PILOTO
+* Classe que representa a tabela PILOTOS
 * @generated
 */
 @Entity
-@Table(name = "\"PILOTO\"")
+@Table(name = "\"PILOTOS\"")
 @XmlRootElement
 @CronappSecurity
-@JsonFilter("app.entity.Piloto")
-public class Piloto implements Serializable {
+@JsonFilter("app.entity.Pilotos")
+public class Pilotos implements Serializable {
 
     /**
     * UID da classe, necessário na serialização
@@ -58,7 +58,7 @@ public class Piloto implements Serializable {
     * Construtor
     * @generated
     */
-    public Piloto(){
+    public Pilotos(){
     }
 
     /**
@@ -76,7 +76,7 @@ public class Piloto implements Serializable {
     * @param id id
     * @generated
     */
-    public Piloto setId(java.lang.String id){
+    public Pilotos setId(java.lang.String id){
         this.id = id;
         return this;
     }
@@ -95,7 +95,7 @@ public class Piloto implements Serializable {
     * @param nome nome
     * @generated
     */
-    public Piloto setNome(java.lang.String nome){
+    public Pilotos setNome(java.lang.String nome){
         this.nome = nome;
         return this;
     }
@@ -114,7 +114,7 @@ public class Piloto implements Serializable {
     * @param nacionalidade nacionalidade
     * @generated
     */
-    public Piloto setNacionalidade(java.lang.String nacionalidade){
+    public Pilotos setNacionalidade(java.lang.String nacionalidade){
         this.nacionalidade = nacionalidade;
         return this;
     }
@@ -133,7 +133,7 @@ public class Piloto implements Serializable {
     * @param equipe equipe
     * @generated
     */
-    public Piloto setEquipe(java.lang.String equipe){
+    public Pilotos setEquipe(java.lang.String equipe){
         this.equipe = equipe;
         return this;
     }
@@ -145,7 +145,7 @@ public class Piloto implements Serializable {
     public boolean equals(Object obj) {
         if (this == obj) return true;
         if (obj == null || getClass() != obj.getClass()) return false;
-Piloto object = (Piloto)obj;
+Pilotos object = (Pilotos)obj;
         if (id != null ? !id.equals(object.id) : object.id != null) return false;
         return true;
     }

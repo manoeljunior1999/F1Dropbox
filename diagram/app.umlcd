@@ -1167,7 +1167,7 @@
           "isVersion": false,
           "storageId": "",
           "storageKey": "5iwesvkV_s8AAAAAAAAAAazWKeKGrAQ_13_t2fPhb6tHXAYmk1vk7gsop2laD49U",
-          "storageType": "cloudservices",
+          "storageType": "dropbox",
           "storageSecret": "",
           "foreignKeyName": ""
         }
@@ -1503,7 +1503,7 @@
           "fill": "#000",
           "font-size": 12,
           "font-weight": "bold",
-          "text": "Piloto"
+          "text": "Pilotos"
         },
         "rect": {
           "stroke": "yellow",
@@ -1642,7 +1642,7 @@
       "isRest": "true",
       "methods": [],
       "modelType": "Table",
-      "name": "Piloto",
+      "name": "Pilotos",
       "position": {
         "x": 270,
         "y": 184

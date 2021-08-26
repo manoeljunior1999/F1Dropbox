@@ -45,7 +45,7 @@ public class Escuderia implements Serializable {
     * @generated
     */
     @Column(name = "carro", nullable = true, unique = false, insertable=true, updatable=true)
-    @CronapiCloud(type = "cloudservices", value="5iwesvkV_s8AAAAAAAAAAazWKeKGrAQ_13_t2fPhb6tHXAYmk1vk7gsop2laD49U", id="", secret="")
+    @CronapiCloud(type = "dropbox", value="5iwesvkV_s8AAAAAAAAAAazWKeKGrAQ_13_t2fPhb6tHXAYmk1vk7gsop2laD49U", id="", secret="")
         
         private java.lang.String carro;
 
